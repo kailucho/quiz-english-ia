@@ -5,6 +5,7 @@ import Question from "./components/Question";
 import Results from "./components/Results";
 import { getQuestions } from "./services/apiService";
 import "./Loader.css"; // Asegúrate de importar los estilos del loader
+import Header from "./components/Header";
 
 function App() {
   const [step, setStep] = useState("selectTopic");
@@ -66,6 +67,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       {step === "selectTopic" && !isLoading && (
         <TopicSelection onSelectUnit={handleSelectUnit} />
       )}
