@@ -1,21 +1,21 @@
-// src/components/Question/Question.jsx
 import React from "react";
+import "./Question.css"; // Importamos los estilos
 
 const Question = ({ question, onAnswer }) => {
-  const handleAnswer = (option) => {
-    onAnswer(option);
-  };
-
   return (
-    <div>
-      <h2>{question.questionText}</h2>
-      <ul>
+    <div className='question-container'>
+      <h2 className='question-text'>{question.questionText}</h2>
+      <div className='options-container'>
         {question.options.map((option) => (
-          <li key={option}>
-            <button onClick={() => handleAnswer(option)}>{option}</button>
-          </li>
+          <button
+            key={option}
+            className='option-button'
+            onClick={() => onAnswer(option)}
+          >
+            {option}
+          </button>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,17 +1,22 @@
 import React from "react";
 import unitsData from "../unitsData";
+import "./TopicSelection.css"; // Importamos los estilos
 
 const TopicSelection = ({ onSelectUnit }) => {
   return (
-    <div>
-      <h1>Selecciona una unidad</h1>
-      <ul>
+    <div className='topic-selection-container'>
+      <h1 className='title'>Selecciona una unidad</h1>
+      <div className='units-grid'>
         {unitsData.map((unit) => (
-          <li key={unit.id}>
-            <button onClick={() => onSelectUnit(unit)}>{unit.name}</button>
-          </li>
+          <button
+            key={unit.id}
+            className='unit-button'
+            onClick={() => onSelectUnit(unit)}
+          >
+            {unit.name}
+          </button>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
