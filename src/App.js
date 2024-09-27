@@ -4,7 +4,7 @@ import TopicSelection from "./components/TopicSelection";
 import Question from "./components/Question";
 import Results from "./components/Results";
 import { getQuestions } from "./services/apiService";
-import "./Loader.css"; // Importamos los estilos del loader
+import "./Loader.css"; // Asegúrate de importar los estilos del loader
 
 function App() {
   const [step, setStep] = useState("selectTopic");
@@ -12,32 +12,36 @@ function App() {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false); // Estado para el loader
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSelectUnit = async (unit) => {
     setSelectedUnit(unit);
-    setIsLoading(true); // Iniciamos el loader
+    setIsLoading(true);
+    setError(null); // Reiniciamos el error
 
     try {
       const fetchedQuestions = await getQuestions(unit);
 
       if (fetchedQuestions.length > 0) {
         setQuestions(fetchedQuestions);
+        setCurrentQuestionIdx(0); // Reiniciamos el índice de preguntas
+        setUserAnswers([]); // Reiniciamos las respuestas del usuario
         setStep("question");
       } else {
-        alert(
+        setError(
           "Hubo un error al obtener las preguntas. Por favor, intenta de nuevo."
         );
         setSelectedUnit(null);
       }
     } catch (error) {
       console.error("Error al obtener las preguntas:", error);
-      alert(
+      setError(
         "Hubo un error al obtener las preguntas. Por favor, intenta de nuevo."
       );
       setSelectedUnit(null);
     } finally {
-      setIsLoading(false); // Detenemos el loader
+      setIsLoading(false);
     }
   };
 
@@ -48,6 +52,16 @@ function App() {
     } else {
       setStep("results");
     }
+  };
+
+  const handleRestart = () => {
+    // Reiniciamos el estado para volver a la selección de unidad
+    setStep("selectTopic");
+    setSelectedUnit(null);
+    setQuestions([]);
+    setCurrentQuestionIdx(0);
+    setUserAnswers([]);
+    setError(null);
   };
 
   return (
@@ -68,7 +82,16 @@ function App() {
         />
       )}
       {step === "results" && (
-        <Results questions={questions} userAnswers={userAnswers} />
+        <Results
+          questions={questions}
+          userAnswers={userAnswers}
+          onRestart={handleRestart} // Pasamos la función de reinicio
+        />
+      )}
+      {error && (
+        <div className='error-message'>
+          <p>{error}</p>
+        </div>
       )}
     </div>
   );

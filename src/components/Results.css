@@ -68,3 +68,21 @@
 .correct-answer strong {
   color: #333;
 }
+
+/* Agrega estos estilos al final de tu archivo Results.css */
+
+.restart-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+  background-color: #0056b3;
+}
