@@ -42,15 +42,21 @@
 .unit-button {
   padding: 20px;
   font-size: 18px;
-  border: 2px solid #28a745;
   border-radius: 5px;
-  background-color: white;
-  color: #28a745;
   cursor: pointer;
   transition: all 0.3s;
+  background-color: #f8bbd0;
+  color: #880e4f;
+  border: 2px solid #e91e63;
 }
 
 .unit-button:hover {
-  background-color: #28a745;
+  background-color: #e1bee7;
   color: white;
+}
+
+.title,
+.unit-type-title {
+  font-family: "Dancing Script", cursive;
+  color: #880e4f;
 }

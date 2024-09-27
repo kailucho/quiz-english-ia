@@ -1,11 +1,16 @@
+/* Importamos una fuente elegante desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
 .app-header {
-  background-color: #007bff;
+  background-color: #f8bbd0; /* Un tono rosa claro */
   padding: 20px;
   text-align: center;
+  border-bottom: 4px solid #e91e63; /* Borde inferior decorativo */
 }
 
 .app-header h1 {
-  color: #fff;
+  color: #880e4f; /* Un rosa más oscuro para contraste */
   margin: 0;
-  font-size: 28px;
+  font-size: 36px; /* Aumentamos el tamaño de la fuente */
+  font-family: "Dancing Script", cursive; /* Fuente cursiva elegante */
 }
