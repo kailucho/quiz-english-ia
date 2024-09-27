@@ -1,7 +1,7 @@
 import React from "react";
 import "./Results.css"; // Asegúrate de tener los estilos
 
-const Results = ({ questions, userAnswers, onRestart }) => {
+const Results = ({ questions, userAnswers, onRestart, onRetakeQuiz }) => {
   const score = questions.reduce((acc, question, index) => {
     return acc + (question.correctAnswer === userAnswers[index] ? 1 : 0);
   }, 0);
@@ -27,9 +27,14 @@ const Results = ({ questions, userAnswers, onRestart }) => {
         </h2>
         <p>Puntuación: {percentage}%</p>
         <p className='feedback-message'>{getFeedbackMessage()}</p>
-        <button className='restart-button' onClick={onRestart}>
-          Volver a seleccionar unidad
-        </button>
+        <div className='buttons-container'>
+          <button className='restart-button' onClick={onRestart}>
+            Volver a seleccionar unidad
+          </button>
+          <button className='retake-button' onClick={onRetakeQuiz}>
+            Reintentar el cuestionario
+          </button>
+        </div>
       </div>
       <ul className='results-list'>
         {questions.map((question, index) => {

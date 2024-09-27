@@ -19,15 +19,13 @@ function App() {
   const handleSelectUnit = async (unit) => {
     setSelectedUnit(unit);
     setIsLoading(true);
-    setError(null); // Reiniciamos el error
+    setError(null);
 
     try {
       const fetchedQuestions = await getQuestions(unit);
 
       if (fetchedQuestions.length > 0) {
         setQuestions(fetchedQuestions);
-        setCurrentQuestionIdx(0); // Reiniciamos el índice de preguntas
-        setUserAnswers([]); // Reiniciamos las respuestas del usuario
         setStep("question");
       } else {
         setError(
@@ -56,13 +54,17 @@ function App() {
   };
 
   const handleRestart = () => {
-    // Reiniciamos el estado para volver a la selección de unidad
     setStep("selectTopic");
     setSelectedUnit(null);
     setQuestions([]);
     setCurrentQuestionIdx(0);
     setUserAnswers([]);
-    setError(null);
+  };
+
+  const handleRetakeQuiz = () => {
+    setStep("question");
+    setCurrentQuestionIdx(0);
+    setUserAnswers([]);
   };
 
   return (
@@ -87,7 +89,8 @@ function App() {
         <Results
           questions={questions}
           userAnswers={userAnswers}
-          onRestart={handleRestart} // Pasamos la función de reinicio
+          onRestart={handleRestart}
+          onRetakeQuiz={handleRetakeQuiz}
         />
       )}
       {error && (
