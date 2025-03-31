@@ -1,0 +1,42 @@
+/* Fondo principal y contenedor */
+.login-container {
+    background-color: #ffd5e5; /* Un rosado suave */
+    width: 100vw; /* Asegura que ocupe toda la pantalla */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Asegura que ocupe toda la pantalla */
+  }
+  
+  /* Contenedor del avatar */
+  .avatar-container {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 16px;
+  }
+  
+  /* Imagen de avatar (redondeada) */
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Título principal */
+  .login-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #333;
+  }
+  
+  /* Contenedor del botón de Google */
+  .google-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

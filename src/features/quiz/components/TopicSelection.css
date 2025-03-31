@@ -1,0 +1,107 @@
+/* TopicSelection.css */
+
+.topic-selection {
+  background-color: #fffafc; /* Color de fondo opcional */
+  min-height: 80vh;
+  padding: 2rem 1rem;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Tarjetas de nivel */
+.levels-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.level-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1 1 200px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.level-card.active {
+  border: 2px solid #5a78d1;
+  transform: scale(1.02);
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.start-button {
+  background-color: #5a78d1;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Tarjetas de unidades */
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.unit-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-placeholder {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.unit-card h4 {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+
+.unit-card p {
+  font-size: 0.85rem;
+  color: #666;
+  min-height: 40px;
+}
+
+.start-link {
+  font-weight: 500;
+  color: #5a78d1;
+  font-size: 0.9rem;
+  margin-top: auto;
+  cursor: pointer;
+}

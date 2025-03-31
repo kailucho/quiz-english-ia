@@ -1,0 +1,116 @@
+/* Contenedor principal del componente */
+.question-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto de la pregunta */
+.question-text {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Contenedor de las opciones */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Botones de opciones */
+.option-button {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #5a78d1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.option-button:hover:not(:disabled) {
+  background-color: #475bb2;
+  transform: scale(1.02);
+}
+
+.option-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* Contenedor de retroalimentación */
+.feedback-container {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Estilos para respuesta correcta */
+.feedback-container.correct {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Estilos para respuesta incorrecta */
+.feedback-container.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Iconos de retroalimentación */
+.feedback-icon {
+  font-size: 1.5rem;
+}
+
+/* Botón para pasar a la siguiente pregunta */
+.next-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #5a78d1;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.next-button:hover {
+  background-color: #475bb2;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .question-text {
+    font-size: 1.5rem;
+  }
+  .option-button, .next-button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-text {
+    font-size: 1.25rem;
+  }
+  .option-button, .next-button {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+}

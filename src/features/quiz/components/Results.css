@@ -1,0 +1,163 @@
+/* Importamos una fuente moderna sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5; /* Fondo gris muy claro para el body */
+}
+
+/* Contenedor principal */
+.results-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.results-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Tarjeta de puntuación */
+.score-card {
+  background-color: #e0f7fa; /* Fondo cian muy claro */
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.score-percentage {
+  font-size: 3rem;
+  color: #00796b; /* Teal */
+  margin: 0;
+}
+
+.score-text {
+  font-size: 1.125rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.feedback-message {
+  font-size: 1.125rem;
+  color: #00796b;
+  margin-top: 1rem;
+}
+
+/* Botones */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.restart-button,
+.retake-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.restart-button {
+  background-color: #66bb6a; /* Verde */
+  color: #fff;
+}
+
+.restart-button:hover {
+  background-color: #57a05a;
+  transform: scale(1.03);
+}
+
+.retake-button {
+  background-color: #42a5f5; /* Azul */
+  color: #fff;
+}
+
+.retake-button:hover {
+  background-color: #379be8;
+  transform: scale(1.03);
+}
+
+/* Lista de resultados */
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-item {
+  background-color: #fafafa;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid;
+}
+
+.result-item.correct {
+  border-color: #66bb6a; /* Acento verde para respuestas correctas */
+}
+
+.result-item.incorrect {
+  border-color: #42a5f5; /* Acento azul para respuestas incorrectas */
+}
+
+.question-text {
+  font-size: 1.125rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.user-answer,
+.correct-answer {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+.user-answer strong,
+.correct-answer strong {
+  color: #333;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1rem;
+  }
+  .results-title {
+    font-size: 1.75rem;
+  }
+  .score-percentage {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-title {
+    font-size: 1.5rem;
+  }
+  .score-percentage {
+    font-size: 2rem;
+  }
+  .restart-button,
+  .retake-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
