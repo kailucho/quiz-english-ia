@@ -25,10 +25,11 @@ This project uses an API for fetching quiz questions and handling authentication
 This project can be deployed on platforms like Vercel or Netlify. Ensure the `.env` file is configured correctly for production.
 
 ## Demo
-[Live Demo](#) (Add your live demo link here)
+[Live Demo](#) [(Add your live demo link here)](https://quiz-english-ia.vercel.app/)
 
 ## Screenshots
-![Screenshot 1](#) (Add screenshots of your app here)
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## Portfolio Highlight
 This project is a showcase of my skills in building interactive web applications using modern technologies. It demonstrates my ability to:
