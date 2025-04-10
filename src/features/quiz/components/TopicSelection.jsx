@@ -25,6 +25,15 @@ import {
   FaBriefcase,
   FaRegClock,
   FaStopwatch,
+  FaHandPointer,
+  FaTag,
+  FaUserTag,
+  FaPlus,
+  FaBan,
+  FaCommentDots,
+  FaMoneyBillWave,
+  FaSearchDollar,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
 
 import unitsDataEN from "../../../utils/unitsDataEN";
@@ -58,6 +67,15 @@ const icons = {
   FaBriefcase: <FaBriefcase style={{ color: "#FFFF33" }} />, // Bright yellow
   FaRegClock: <FaRegClock style={{ color: "#33CCFF" }} />, // Sky blue
   FaStopwatch: <FaStopwatch style={{ color: "#FFCC33" }} />, // Mustard yellow
+  FaHandPointer: <FaHandPointer style={{ color: "#FF9900" }} />, // Orange
+  FaTag: <FaTag style={{ color: "#FF6600" }} />, // Deep orange
+  FaUserTag: <FaUserTag style={{ color: "#FF3300" }} />, // Red
+  FaPlus: <FaPlus style={{ color: "#33CC33" }} />, // Green
+  FaBan: <FaBan style={{ color: "#FF0000" }} />, // Bright red
+  FaCommentDots: <FaCommentDots style={{ color: "#0099FF" }} />, // Blue
+  FaMoneyBillWave: <FaMoneyBillWave style={{ color: "#33CC99" }} />, // Mint green
+  FaSearchDollar: <FaSearchDollar style={{ color: "#FFCC00" }} />, // Golden yellow
+  FaChalkboardTeacher: <FaChalkboardTeacher style={{ color: "#9933FF" }} />, // Deep purple
 };
 
 const dataByLanguage = {

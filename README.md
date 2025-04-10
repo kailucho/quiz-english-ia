@@ -35,7 +35,7 @@ This project can be deployed on platforms like Vercel or Netlify. Ensure the `.e
 This project is a showcase of my skills in building interactive web applications using modern technologies. It demonstrates my ability to:
 
 - Develop responsive and user-friendly interfaces.
-- Integrate AI-powered features to enhance user experience.
+- Integrate AI-powered features to enhance user experience, including OpenAI integration.
 - Implement efficient state management and API handling.
 - Deploy applications on platforms like Vercel or Netlify.
 

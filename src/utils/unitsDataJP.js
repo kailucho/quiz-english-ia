@@ -282,6 +282,87 @@ Yoroshiku onegai shimasu.`,
 にじゅっぷん (nijuppun)
 さんじゅっぷん (sanjuppun)`,
   },
+  {
+    id: 16,
+    type: "Básico 2",
+    name: "Demostrativos",
+    theme: "Demostrativos",
+    icon: "FaHandPointer",
+    content: `これ / それ / あれ / どれ – esto / eso / aquello / cuál`
+  },
+  {
+    id: 17,
+    type: "Básico 2",
+    name: "Demostrativos + Sustantivo",
+    theme: "Demostrativos + Sustantivo",
+    icon: "FaTag",
+    content: `この / その / あの / どの + Noun – este / ese / aquel / qué + sustantivo`
+  },
+  {
+    id: 18,
+    type: "Básico 2",
+    name: "Lugares",
+    theme: "Lugares",
+    icon: "FaMapMarkerAlt",
+    content: `ここ / そこ / あそこ / どこ – aquí / ahí / allí / dónde`
+  },
+  {
+    id: 19,
+    type: "Básico 2",
+    name: "De quién",
+    theme: "Posesivos",
+    icon: "FaUserTag",
+    content: `だれの Noun – sustantivo de quién`
+  },
+  {
+    id: 20,
+    type: "Básico 2",
+    name: "También",
+    theme: "Partícula も",
+    icon: "FaPlus",
+    content: `Noun も – también (con sustantivo)`
+  },
+  {
+    id: 21,
+    type: "Básico 2",
+    name: "Negación",
+    theme: "Negación (じゃない)",
+    icon: "FaBan",
+    content: `Noun じゃないです – no es (forma negativa con sustantivo)`
+  },
+  {
+    id: 22,
+    type: "Básico 2",
+    name: "Partículas ね / よ",
+    theme: "Partículas finales",
+    icon: "FaCommentDots",
+    content: `〜ね / 〜よ – partículas para confirmar / enfatizar`
+  },
+  {
+    id: 23,
+    type: "Básico 2",
+    name: "Notas culturales",
+    theme: "El dinero japonés",
+    icon: "FaMoneyBillWave",
+    content: `Notas culturales: El dinero japonés`
+  },
+  {
+    id: 24,
+    type: "Básico 2",
+    name: "Investiguemos",
+    theme: "Comparar los precios",
+    icon: "FaSearchDollar",
+    content: `Investiguemos: Comparar los precios`
+  },
+  {
+    id: 25,
+    type: "Básico 2",
+    name: "Expresiones útiles",
+    theme: "En el salón de clase",
+    icon: "FaChalkboardTeacher",
+    content: `Expresiones útiles: En el salón de clase`
+  }
+
 ];
 
 export default unitsDataJP;

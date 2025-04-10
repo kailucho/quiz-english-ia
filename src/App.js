@@ -12,7 +12,19 @@ function AppContent() {
   const [step, setStep] = useState(isAuthenticated ? "selectTopic" : "login");
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("jp"); // Idioma por defecto
+  const handleLanguageChange = (newLanguage) => {
+    setLanguage(newLanguage);
+    //save localStorage
+    localStorage.setItem("language", newLanguage);
+  };
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
 
   // Al seleccionar una unidad se obtienen las preguntas
   const handleSelectUnit = async (unit, language) => {
@@ -63,7 +75,7 @@ function AppContent() {
 
   return (
     <div>
-      <Header onLogout={handleLogout} language={language} setLanguage={setLanguage} />
+      <Header onLogout={handleLogout} language={language} setLanguage={handleLanguageChange} />
 
       {step === "login" && <Login onLoginSuccess={handleLogin} />}
       {step === "selectTopic" && isAuthenticated && !isLoading && (
